@@ -1,0 +1,29 @@
+<html>
+<head><title>Session 9.1 </title>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<script language="VBScript">
+sub fib(n)
+dim fib1,fib2,fib3
+fib1=0
+fib2=1
+
+document.write("Fibonacci Series<br>")
+document.write(fib1 & "&nbsp;&nbsp;" & fib2 & "&nbsp;&nbsp;")
+
+for i=3 to n
+	fib3=cint(fib1)+cint(fib2)
+	document.write(fib3 & "&nbsp;&nbsp;")
+	fib1=fib2
+	fib2=fib3
+next
+end sub
+</script>
+</head>
+<body>
+<form name="form1" method="post" action="">
+Generate Fibonacci Series<br>
+<p>Enter the value of n <input type="text" name="num"><br><br>
+<input type="submit" name="submit" value="Generate" onclick="fib(form1.num.value)">
+</form>
+</body>
+</html>

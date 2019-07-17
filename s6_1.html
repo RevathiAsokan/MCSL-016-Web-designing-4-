@@ -1,0 +1,53 @@
+<html>
+<head><title>Session 6.1 </title>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<script language = "VBScript">
+sub check()
+dim email
+email = form1.e.value
+	if(form1.n.value="")then
+		alert("Enter Name")
+	elseif(form1.a.value="")then
+		alert("Enter Address")
+	elseif(form1.d.value ="")then
+		alert("Enter Day")
+	elseif(form1.m.value ="")then
+		alert("Enter Month")
+	elseif(form1.y.value ="") then
+		alert("Enter Year")
+	elseif((instr(email, "@") = 0) or (instr(email, ".") = 0) or (len(email) < 7)) Then
+		alert ("Enter a valid e-mail address")
+	else
+		msgbox("Validated Successfully..!")
+	end if
+end sub
+</script>
+</head>
+<body>
+<form name="form1" method="post" action="">
+<p>Name <input name="n" type="text"><br><br>
+Address <input name="a" type="text"><br><br>
+Date Of Birth : Day <select name="d">
+<option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+<option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+<option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+<option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+<option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+<option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+<option>31</option>
+</select>
+Month <select name="m">
+<option></option><option>Jan</option><option>Feb</option><option>Mar</option><option>Aprl</option><option>May</option>
+<option>Jun</option><option>July</option><option>Aug</option><option>Sep</option><option>Oct</option>
+<option>Nov</option><option>Dec</option>
+</select>
+Year <select name="y">
+<option></option><option>2000</option><option>2001</option><option>2002</option><option>2003</option><option>2004</option>
+<option>2005</option><option>2006</option><option>2007</option><option>2008</option><option>2009</option>
+<option>2010</option><option>2011</option>
+</select><br><br>
+Email ID <input name="e" type="text"><br><br>
+<input type="submit" name="Submit" value="Submit" onClick="check()">
+</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head><title>Session 4.2 </title>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<script language = "VBScript">
+sub check()
+dim email
+email = form1.t.value
+	if ((instr(email, "@") = 0) or (instr(email, ".") = 0) or (len(email) < 7)) Then
+	alert ("Please enter a valid e-mail address!")
+	else
+	msgbox("Email ID validated")
+	end if
+end sub
+</script>
+</head>
+<body>
+<form name="form1" method="post" action="">
+Enter Email ID <input name="t" type="text">
+<input type="submit" name="Submit" value="Submit" onClick="check()">
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head><title>Session 2.1 </title>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<script language="VBScript">
+sub area()
+dim l,b,h,a
+l=form1.l.value 
+b=form1.b.value
+h=form1.h.value
+a = l*b*h
+msgbox("Area of Rectangle = "&a)    
+end sub
+</script>
+</head>
+<body >
+<form name="form1" method="post" action="">
+<p> To calculate area of Rectangle </p>
+Enter Length:  <input name="l" type="text"><br><br>
+Enter Breadth: <input name="b" type="text"><br><br>
+Enter Height:  <input name="h" type="text"><br><br>
+<input type="button" name="Button" value="Calculate" onClick="area()">
+</form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head><title>Session 10.2</title>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<script language="VBScript">
+sub transpose(r,c)
+dim a(10,10),b(10,10),i,j
+for i=1 to r
+	for j=1 to c
+		a(i,j)=inputbox("enter elements of matrix A:")
+		b(j,i)=a(i,j)
+	next
+next
+document.write("Entered matrix is: <br>")
+for i=1 to r
+	for j=1 to c
+		document.write("   " & a(i,j))
+	next
+	document.write("<br>")
+next
+document.write("<br>Transpose of entered matrix is: <br>")
+for i=1 to c
+	for j=1 to r
+		document.write("   " &  b(i,j))
+	next
+	document.write("<br>")
+next
+end sub
+</script>
+</head>
+<body>
+<form name="form1" method="post" action="">
+Transpose of a Matrix<br><br>
+Enter number of rows: <input name="row" type="text"><br><br>
+Enter number of columns: <input name="col" type="text"><br><br>
+<input name="Submit" type="submit" value="Submit" onClick="transpose(form1.row.value,form1.col.value)">
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head><title>Session 1.1</title>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<script language = "VBScript">
+sub newpages(txt)
+document.writeln("Hello " + txt)
+end sub
+</script>
+</head>
+<body>
+<form name="form1" method="post" action="">
+<p>Enter User Name <input type="text" name="t1"></p>
+<p><input type="submit" name="Submit" value="Enter" onClick="newpages(form1.t1.value)"></p>
+</form>
+</body>
+</html>
+
+
+

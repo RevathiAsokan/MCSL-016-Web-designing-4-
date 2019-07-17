@@ -1,0 +1,32 @@
+<html>
+<head><title>Session 7.2 </title>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<script language="VBScript">
+sub calcsi()
+dim p, t , r, si
+p=form1.p.value 
+t=form1.t.value
+r=form1.r.value
+	if (p="") then
+		alert("Enter principal amount")
+	elseif(t="")then
+		alert("Enter time")
+	elseif(r="") then
+		alert("Enter rate of interest")
+	else
+	si = (p*t*r)/100
+	msgbox("Simple interest = "&si)    
+	end if
+end sub
+</script>
+</head>
+<body >
+<form name="form1" method="post" action="">
+<p> To calculate Simple Interest </p>
+Enter Principal:  <input name="p" type="text"><br><br>
+Enter Time: <input name="t" type="text"><br><br>
+Enter Rate of Interest:  <input name="r" type="text"><br><br>
+<input type="button" name="Button" value="Calculate" onClick="calcsi()">
+</form>
+</body>
+</html>

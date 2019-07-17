@@ -1,0 +1,37 @@
+<html>
+<head><title>Session 10.2</title>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<script language="VBScript">
+sub check(n)
+dim i,flag
+flag=true
+	for i=2 to cint(n)/2
+		if (n Mod i)=0 then
+		flag=false
+		end if
+	next
+	if flag=true then
+	factorial(n)
+	else
+	alert("Not a prime number")
+	end if
+end sub
+sub factorial(n)
+	dim fact,i
+	fact=1
+	i=1
+	do while(i<=cint(n))
+		fact=cint(fact)*cint(i)
+		i=i+1
+	loop
+	msgbox("Factorial = "&fact)
+	end sub
+</script>
+</head>
+<body>
+<form name="form1" method="post" action="">
+To find factorial of a prime number<br><br>
+Enter a number: <input name="n" type="text" id="n"><br><br>
+<input name="Button" type="button" value="Calculate" onClick="check(form1.n.value)" >
+</form></body>
+</html>

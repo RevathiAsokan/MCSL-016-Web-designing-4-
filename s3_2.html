@@ -1,0 +1,44 @@
+<html>
+<head><title>Session 3.2 </title>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<script language = "VBScript">
+sub calc(ch)
+if(ch="=")then
+	form1.t.value= eval(form1.t.value)
+else
+	if(ch="C") then
+	form1.t.value= ""
+	else
+	form1.t.value=form1.t.value & ch
+	end if
+end if
+end sub
+</script>
+</head>
+<body>
+<form name="form1" method="post" action="">
+<input name="t" type="text">
+<br>
+<input type="button" value="7" onClick="calc('7')">
+<input type="button" value="8" onClick="calc('8')">
+<input type="button" value="9" onClick="calc('9')">
+<input type="button" value="+" onClick="calc('+')">
+<br>
+<input type="button" value="4" onClick="calc('4')">
+<input type="button" value="5" onClick="calc('5')">
+<input type="button" value="6" onClick="calc('6')">
+<input type="button" value="-" onClick="calc('-')">
+<br>
+<input type="button" value="1" onClick="calc('1')">
+<input type="button" value="2" onClick="calc('2')">
+<input type="button" value="3" onClick="calc('3')">
+<input type="button" value="*" onClick="calc('*')">
+<br>
+<input type="button" value="0" onClick="calc('0')">
+<input type="button" value="C" onClick="calc('C')">
+<input type="button" value="=" onClick="calc('=')">
+<input type="button" value="/" onClick="calc('/')">
+<br>
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head><title>Session 9.2 </title>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<script language="VBScript">
+sub factorial(n)
+dim fact,i
+fact=1
+i=1
+do while(i <= cint(n))
+	fact=cint(fact)*cint(i)
+	i=i+1
+loop
+msgbox("Factorial="&fact) 
+end sub
+</script>
+</head>
+<body>
+<form name="form1" method="post" action="">
+<input name="num" type="text"><br><br>
+<input name="Button" type="button" value="Print Factorial" onClick="factorial(form1.num.value)" >
+</form>
+</body>
+</html>

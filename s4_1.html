@@ -1,0 +1,21 @@
+<html>
+<head><title>Session 4.1 </title>
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<script language = "VBScript">
+sub check()
+	if(form1.t.value="")then
+	alert("Null String..! Enter value")
+	form1.t.focus()
+	else
+	msgbox("Welcome "+form1.t.value)
+	end if
+end sub
+</script>
+</head>
+<body>
+<form name="form1" method="post" action="">
+Enter a Text: <input name="t" type="text"><br>
+<input type="submit" value="Submit" onClick="check()">
+</form>
+</body>
+</html>
